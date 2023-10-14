@@ -9,7 +9,7 @@
             //bool: хранит значение true или false(логические литералы)
             bool alive = true;
             bool isDead = false;
-            
+
             //byte: хранит целое число от 0 до 255 и занимает 1 байт.
             byte bit1 = 1;
             //sbyte: хранит целое число от -128 до 127 и занимает 1 байт
@@ -121,6 +121,14 @@
                 Console.WriteLine(c);
             }
 
+
+            //array
+            int[] cucumber = new int[4] { 4, 1, 7, 9 };
+            //2darray
+            int[,] array2D = new int[,] { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } };
+
+            //List
+            var list = new List<int>() { 12, 82, 35, 54 };
 
         }
     }
