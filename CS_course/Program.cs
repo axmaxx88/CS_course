@@ -121,11 +121,25 @@
                 Console.WriteLine(c);
             }
 
-
             //array
             int[] cucumber = new int[4] { 4, 1, 7, 9 };
             //2darray
-            int[,] array2D = new int[,] { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } };
+            int[,] array2D = new int[,] { 
+                { 1, 2 }, 
+                { 3, 4 }, 
+                { 5, 6 }, 
+                { 7, 8 } 
+            };
+            Console.WriteLinr(array2D[1, 1])
+            Console.WriteLinr(array2D.Length)
+
+            for (int i = 0; i < array2D.GetLength(0); i++)
+            {
+                for (int j = 0; j < array2D.GetLength(1); j++)
+                {
+                    Console.Write(array2D[i, j] + " ");
+                }
+            }   Console.WriteLLine();
 
             //List
             var list = new List<int>() { 12, 82, 35, 54 };
