@@ -129,16 +129,16 @@
                 { 5, 6 }, 
                 { 7, 8 } 
             };
-            Console.WriteLinr(array2D[1, 1])
-            Console.WriteLinr(array2D.Length)
+            Console.WriteLine(array2D[1, 1]);
+            Console.WriteLine(array2D.Length);
 
-            for (int i = 0; i < array2D.GetLength(0); i++)
+            for (int i = 0; i < array2D.GetLength(0); i++) 
             {
                 for (int j = 0; j < array2D.GetLength(1); j++)
                 {
                     Console.Write(array2D[i, j] + " ");
                 }
-            }   Console.WriteLLine();
+            }   Console.WriteLine();
 
             //List
             var list = new List<int>() { 12, 82, 35, 54 };
