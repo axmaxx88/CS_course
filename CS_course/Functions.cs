@@ -11,7 +11,11 @@ namespace CS_course
         static void Main(string[] args)
         {
             int sum = 0, x = 1, y = 5;
+            int result;
+            
             Add(ref sum, x, y);
+            result = summ(x, y);
+            
             Console.WriteLine(sum);
         }
 
@@ -20,7 +24,10 @@ namespace CS_course
             return h + v;
         }
 
-        static void Add(ref int sum, int x, int y = 8)
+        int sum = 0;
+        int x;
+
+        static void Add(ref int sum, out int x, int y = 8)
         {
             sum = x + y;
         }
