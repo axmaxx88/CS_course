@@ -141,7 +141,46 @@
             }   Console.WriteLine();
 
             //List
-            var list = new List<int>() { 12, 82, 35, 54 };
+            List<int> number = new List<int>(5);
+            numbers[0] = 1;
+            numbers.Add(12);
+            numbers.Add(8);
+            numbers.AddRange(new int[] { 3, 4, 5, 6 });
+            numbers.RemoveAt(4);
+            numbers.Clear();
+            numbers.IndexOff(22);
+            for (int l = 0; l < numbers.Count; l++)
+                {
+                    Console.Write(numbers[l]);
+                }
+
+            //Queue --from start
+            Queue<string> patients = new Queue<string>();
+            patients.Enqueue("Ivan");
+            patients.Enqueue("Igor");
+
+            foreach (var patient in patients)
+            {
+                Console.WriteLine(patient);
+            }
+
+            //Stack --from end
+            Stack<int> numbers = new Stack<int>();
+            numbers.Push(1);
+            numbers.Push(5);
+
+            //Dictionary
+            Dictionary<string, string> countriesCapitals = new Dictionary<string, string>();
+            countriesCapitals.Add("Australia", "Kanberra");
+            countriesCapitals.Add("Russia", "Moscow");
+
+            foreach (var item in countriesCapitals)
+            {
+                Console.WriteLine($"Country - {item.Key} capital {item.Value}");
+            }
+            
+            
+            
 
         }
     }
