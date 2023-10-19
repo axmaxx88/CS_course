@@ -6,13 +6,26 @@ using System.Threading.Tasks;
 
 namespace CS_course
 {
-    static void Main(string[] args)
+    internal class Programm
     {
-        Car ferrari = new Car();
+        static void Main(string[] args)
+        {
+            Car ferrari = new Car();
+            ferrari.Name = "F40";
+            ferrari.HorsePower = 471;
+            ferrari.Age = 30;
+            ferrari.MaxSpeed = 317.0f;
+            
+        } 
     }
+    
     class Car
     {
-        
+        public string Name;
+        public int HorsePower;
+        public int Age;
+        public float MaxSpeed;
+        private int _model;
     }
    
 }
