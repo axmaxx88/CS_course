@@ -24,9 +24,12 @@ namespace CS_course
     
     class Car
     {
+        //public, private - модификатор доступа (если не указать, то установится по умолчанию private)
+        //наименование private полей - _nameOfVariable
+        //наименование public полей - NameOfVariable
         public string Name;
-        public int HorsePower;
-        public int Age;
+        int _horsePower;
+        private int _age;
         public float MaxSpeed;
         private int _model;
 
