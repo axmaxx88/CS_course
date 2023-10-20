@@ -10,7 +10,9 @@ namespace CS_course
     {
         static void Main(string[] args)
         {
-            Car ferrari = new Car();
+            Car ferrari = new Car(); //конструктор по умолчанию
+            Car lamborgini = new Car("Hurracan", 580, 2, 347.0f); //кастомный конструктор
+            
             ferrari.Name = "F40";
             ferrari.HorsePower = 471;
             ferrari.Age = 30;
@@ -32,6 +34,24 @@ namespace CS_course
         private int _age;
         public float MaxSpeed;
         private int _model;
+        public int Years = 4; 
+
+        //конструктор с параметрами
+        public Car(string name, int horsePower, int age, float maxSpeed)
+        {
+            Name = name;
+            HorsePower = horsePower;
+            MaxSpeed = maxSpeed;
+        }
+
+        //пустой конструктор со значениями по умолчанию
+        public Car()
+        {
+            Name = "Ford";
+            HorsePower = 500;
+            Age = 1;
+            MaxSpeed = 300;
+        }
 
         //Методы класса 
         public void ShowTechicalPasport()
@@ -40,9 +60,9 @@ namespace CS_course
                              $"\nAge of car: {Age}\nMax Speed: {MaxSpeed} ")
         }
 
-        public void BecomeOlder(int years, int runAwayHorses)
+        public void BecomeOlder(int Years, int runAwayHorses)
         {
-            Age += years;
+            Age += this.Years + Years;    //this - указываем на тот элемент, который есть в классе
             HorsePower -= runAwayHorses;
         }
     }
