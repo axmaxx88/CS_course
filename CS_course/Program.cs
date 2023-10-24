@@ -130,14 +130,16 @@
                 }
             }   Console.WriteLine();
 
-            //List
+            //Коллекции
+            //List (в отличии от массивом есть функции)
             List<int> number = new List<int>(5);
             numbers[0] = 1;
-            numbers.Add(12);
-            numbers.Add(8);
+            numbers.Add(12);    //Добавление значения в конец Листа
+            numbers.Add(8);    //Добавление значения в конец Листа
             numbers.AddRange(new int[] { 3, 4, 5, 6 });
-            numbers.RemoveAt(4);
-            numbers.Clear();
+            numbers.Remove(4);  //Удаляет элемент коллекции по первому совпадению
+            numbers.RemoveAt(4);  //Удаляет элемент коллекции по индексу
+            numbers.Clear();  //Очистить коллекцию
             numbers.IndexOff(22);
             for (int l = 0; l < numbers.Count; l++)
                 {
@@ -146,8 +148,10 @@
 
             //Queue --from start
             Queue<string> patients = new Queue<string>();
-            patients.Enqueue("Ivan");
+            patients.Enqueue("Ivan");  //Добавить элемент в очередь
             patients.Enqueue("Igor");
+            patients.Enqueue("Oleg");
+            patients.Dequeue();    //Удалить первый элемент в очереди
 
             foreach (var patient in patients)
             {
@@ -156,8 +160,9 @@
 
             //Stack --from end
             Stack<int> numbers = new Stack<int>();
-            numbers.Push(1);
+            numbers.Push(1);    //Добавить элемент
             numbers.Push(5);
+            numbers.Pop();    //Извлеч последний элемент
 
             //Dictionary
             Dictionary<string, string> countriesCapitals = new Dictionary<string, string>();
